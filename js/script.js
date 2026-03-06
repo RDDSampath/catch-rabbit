@@ -1315,6 +1315,12 @@ function resetGame(){
   hero.mesh.position.z = 0;
   hero.mesh.position.x = 0;
 
+  // Reset camera position to game start position
+  camera.position.x = 0;
+  camera.position.y = 100;
+  camera.position.z = cameraPosGame;
+  camera.lookAt(new THREE.Vector3(50, 30, -50));
+
   monsterPos = .56;
   monsterPosTarget = .65;
   speed = initSpeed;
